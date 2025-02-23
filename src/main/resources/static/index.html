@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4 quiz-title">Java Quiz Challenge</h1>
+        
+      
+
+        <div class="mb-4" id="name-section">
+            <label for="userName" class="form-label fw-bold">Enter your name:</label>
+            <input type="text" class="form-control" id="userName" placeholder="Your name">
+            <button class="btn btn-success mt-2" id="startBtn" onclick="startQuiz()" disabled>Start Quiz</button>
+        </div>
+
+        <div id="progress-container" class="mb-4" style="display: none;">
+            <div class="progress">
+                <div class="progress-bar bg-success" id="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"></div>
+            </div>
+            <p class="text-center mt-2" id="progress-text">Question 0 of 0</p>
+        </div>
+
+        <div id="quiz-container" class="mb-4" style="display: none;"></div>
+        
+        <div id="button-container" style="display: none;">
+            <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()">Submit Quiz</button>
+            <button class="btn btn-secondary ms-2" id="resetBtn" onclick="resetQuiz()" style="display: none;">Reset Quiz</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/quiz.js"></script>
+</body>
+</html>

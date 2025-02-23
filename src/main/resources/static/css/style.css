@@ -1,0 +1,122 @@
+body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.quiz-title, .thank-you-title {
+    color: #2c3e50;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#name-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#quiz-container .question {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-check {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.form-check:hover {
+    background-color: #f1f3f5;
+}
+
+.form-check input:checked + label {
+    color: #28a745;
+    font-weight: bold;
+}
+
+#progress-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#button-container {
+    text-align: center;
+}
+
+.score-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    animation: popIn 0.5s ease;
+}
+
+#score-text {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#score-value {
+    color: #28a745;
+    font-weight: bold;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.btn-primary, .btn-success, .btn-secondary {
+    padding: 10px 25px;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+
+/* Existing styles remain the same... */
+
+.alert {
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}

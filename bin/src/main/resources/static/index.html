@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+#quiz-container .question {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Java Quiz</h1>
+
+    <div class="mb-3">
+        <label for="userName" class="form-label">Enter your name:</label>
+        <input type="text" class="form-control" id="userName" placeholder="Your name">
+    </div>
+
+    <div id="quiz-container" class="mb-4"></div>
+
+    <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()" disabled>Submit Quiz</button>
+    <div id="result" class="mt-3"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/quiz.js"></script>
+</body>
+</html>
