@@ -1,8 +1,4 @@
-Below is a `README.md` file for your Spring Boot quiz application, focusing on the project progress just before we introduced the "Add New Question" functionality. This will cover the core features of the quiz application, including the Spring Boot backend, frontend UI with HTML/CSS/Bootstrap/JavaScript, database integration, and deployment instructions. I’ll exclude the "Add New Question" part as requested and focus on the state of the project up to the point where we had the quiz, thank-you page, and basic styling/interactivity.
 
----
-
-### README.md
 
 # Java Quiz Spring Boot Application
 
@@ -142,13 +138,6 @@ This project is open-source and available under the MIT License. See the `LICENS
 
 ## Contact
 
-For questions or feedback, contact [Your Name/Email] or open an issue in the repository (if hosted on GitHub or similar).
+For questions or feedback, contact [Rakesh Gupta/rakeshgupta136a@gmail.com] or open an issue in the repository (if hosted on GitHub or similar).
 
 ---
-
-### Notes
-- This README assumes your project is named `quiz-app` and follows the package structure `com.example.quizapp`. Adjust the names, package, and paths as needed for your project.
-- It excludes the "Add New Question" functionality, focusing only on the quiz, score tracking, and thank-you page as they were before that feature was added.
-- If your project is hosted on GitHub or another platform, you can add a link to the repository and include version control instructions (e.g., cloning, branching).
-
-Let me know if you’d like to customize this further (e.g., add specific instructions, change the tone, or include additional sections). What’s your next step?
