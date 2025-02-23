@@ -1,122 +1,206 @@
-body {
-    background: linear-gradient(135deg, #e0eafc, #cfdef3);
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+/* Cyber Theme Styles */
+:root {
+  --neon-blue: #00f3ff;
+  --neon-purple: #bc13fe;
+  --cyber-black: #0a0a0f;
+  --cyber-gray: #1a1a25;
+  --hacker-green: #20c20e;
+  --cyber-red: #ff073a;
+  --cyber-yellow: #ffd300;
 }
 
-.quiz-title, .thank-you-title {
-    color: #2c3e50;
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+body {
+  background: var(--cyber-black);
+  font-family: 'Courier New', monospace;
+  color: var(--neon-blue);
+  min-height: 100vh;
+}
+
+.quiz-title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-purple);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px var(--neon-purple);
+  position: relative;
+  padding: 1rem;
+  border: 2px solid var(--neon-purple);
+  box-shadow: 0 0 15px var(--neon-purple);
+  background: rgba(11, 11, 18, 0.9);
 }
 
 #name-section {
-    max-width: 400px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  background: var(--cyber-gray);
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
-#quiz-container .question {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 25px;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease forwards;
+.form-control {
+  background: transparent;
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.form-control:focus {
+  background: rgba(0, 243, 255, 0.1);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 15px var(--neon-purple);
+  color: var(--neon-purple);
 }
 
+.btn-success {
+  background: linear-gradient(45deg, var(--hacker-green), #0d6e0d);
+  border: 1px solid var(--hacker-green);
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  box-shadow: 0 0 20px var(--hacker-green);
+  transform: scale(1.05);
+}
+
+/* Cyber Progress Bar */
+.progress {
+  height: 20px;
+  background: var(--cyber-gray);
+  border: 1px solid var(--neon-blue);
+  border-radius: 0;
+  box-shadow: inset 0 0 10px rgba(0, 243, 255, 0.2);
+}
+
+.progress-bar {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  position: relative;
+  overflow: visible;
+  animation: progress-glow 1.5s infinite alternate;
+}
+
+@keyframes progress-glow {
+  from { box-shadow: 0 0 10px var(--neon-blue); }
+  to { box-shadow: 0 0 20px var(--neon-purple); }
+}
+
+/* Cyber Question Cards */
+.question {
+  background: var(--cyber-gray);
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.question:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px var(--neon-blue);
+}
+
+.question::before {
+  content: '>> ';
+  color: var(--hacker-green);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 1.2em;
+}
+
+/* Cyber Radio Buttons */
 .form-check {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 .form-check:hover {
-    background-color: #f1f3f5;
+  background: rgba(0, 243, 255, 0.05);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
 }
 
-.form-check input:checked + label {
-    color: #28a745;
-    font-weight: bold;
+.form-check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--neon-blue);
+  border-radius: 0;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-#progress-container {
-    max-width: 600px;
-    margin: 0 auto;
+.form-check-input:checked {
+  background: var(--neon-blue);
+  box-shadow: 0 0 15px var(--neon-blue);
 }
 
+.form-check-input:checked::after {
+  content: '✓';
+  position: absolute;
+  color: var(--cyber-black);
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cyber Button Container */
 #button-container {
-    text-align: center;
-}
-
-.score-box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    animation: popIn 0.5s ease;
-}
-
-#score-text {
-    color: #2c3e50;
-    font-size: 2.5em;
-    margin: 0;
-}
-
-#score-value {
-    color: #28a745;
-    font-weight: bold;
-}
-
-@keyframes popIn {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-.btn-primary, .btn-success, .btn-secondary {
-    padding: 10px 25px;
-    transition: transform 0.2s ease;
+  border-top: 2px solid var(--neon-blue);
+  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border: none;
+  background: linear-gradient(45deg, var(--neon-purple), #8a2be2);
+  border: 1px solid var(--neon-purple);
+  letter-spacing: 2px;
 }
 
-.btn-primary:hover, .btn-success:hover, .btn-secondary:hover {
-    transform: scale(1.05);
+.btn-primary:hover {
+  box-shadow: 0 0 25px var(--neon-purple);
 }
 
-
-/* Existing styles remain the same... */
-
+/* Terminal-like Alerts */
 .alert {
-    margin-top: 10px;
-    transition: opacity 0.3s ease;
+  background: var(--cyber-gray);
+  border: 1px solid var(--cyber-yellow);
+  color: var(--cyber-yellow);
+  font-family: 'Courier New', monospace;
+  border-left: 5px solid var(--cyber-yellow);
 }
 
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border-color: #c3e6cb;
+/* Scanning Animation */
+@keyframes scan-line {
+  0% { top: -100%; }
+  100% { top: 100%; }
 }
 
-.alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
-    border-color: #f5c6cb;
+body::after {
+  content: '';
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 243, 255, 0.5),
+    transparent
+  );
+  animation: scan-line 4s infinite linear;
+  pointer-events: none;
 }
